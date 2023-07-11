@@ -4,16 +4,19 @@ pragma solidity ^0.8.7;
 
 contract Module1 {
 
-    function divide(uint256 a, uint256 b) public pure returns (uint256) {
-        
-    require(b != 0, "Divisor cannot be zero");
+    
+function age(uint256 _age) public pure returns(string memory) {
 
-    uint256 result = a / b;
-    assert(result >= 10);
-    if (result > 100) {
-        revert("Result exceeds limit");
-    }
-    return result;
+require(_age>=18, "You must be above or equal to 18!!");
+
+assert(_age<200);
+
+if (_age>60){
+    revert("You have reached the retirement age!!");
 }
+
+
+return "Yeahhh the functions worked. Well done Umar!";
+} 
 
 }
